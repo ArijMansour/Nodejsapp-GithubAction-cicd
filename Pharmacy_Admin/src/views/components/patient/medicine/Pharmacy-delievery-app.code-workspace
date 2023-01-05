@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "Pharmacy-delievery-app",
+			"path": "../../../../../.."
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}

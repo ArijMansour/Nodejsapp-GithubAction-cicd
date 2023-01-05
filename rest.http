@@ -1,0 +1,51 @@
+    //------------------------------------ Client
+// register Client
+POST http://localhost:5000/api/v1/auth/register
+#  body={
+    "pharmacyName":"cheffa",
+    "pharmacyAddress":"Tozeur",
+    "phone":"123456789",
+    "email":"chadi.troudi@esprit.tn",
+    "password":"123456789",
+    "confirm":"123456789"
+}
+​
+###
+// Approve Pharmacy request 
+
+POST http://localhost:5000/api/v1/auth/register
+
+#body ={
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaGFybWFjeU5hbWUiOiJjaGVmZmEiLCJlbWFpbCI6ImNoYWRpLnRyb3VkaUBlc3ByaXQudG4iLCJwaGFybWFjeUFkZHJlc3MiOiJUb3pldXIiLCJwaG9uZSI6IjEyMzQ1Njc4OSIsInBhc3N3b3JkIjoiMTIzNDU2Nzg5IiwiY29uZmlybSI6IjEyMzQ1Njc4OSIsImlhdCI6MTY1NzQyNjcxMiwiZXhwIjoxNjU4MDMxNTEyfQ.NZEW9HvEQMRKe7vO4DOyXFNPjHYAwIFl5Oi8FDpwU3A",
+    "state":true,
+    "password":"12345678",
+    "confirm":"12345678"
+}
+
+
+###
+// Activate account for pharmacy:
+POST http://localhost:5000/api/v1/auth/activate
+
+#body ={
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaGFybWFjeU5hbWUiOiJjaGVmZmEiLCJwaGFybWFjeUFkZHJlc3MiOiJUb3pldXIiLCJwaG9uZSI6IjEyMzQ1Njc4OSIsInBhc3N3b3JkIjoiMTIzNDU2Nzg5IiwiY29uZmlybSI6IjEyMzQ1Njc4OSIsImVtYWlsIjoiY2hhZGkudHJvdWRpQGVzcHJpdC50biIsInJvbGUiOiJQSEFSTUFDWSIsImlhdCI6MTY1NzU4NjI5MywiZXhwIjoxNjU3NjExNDkzfQ.6c8uPJNkYnNdce7iDdgIas3-Xlzt_rqtwQBI4REcYxw"
+}
+
+
+###
+// Forget Password:
+POST http://localhost:5000/api/v1/auth/forgotpassword
+
+#body ={
+
+    "email":"chadi.troudi@esprit.tn"
+    }
+
+    ###
+// Reset Password:
+POST http://localhost:5000/api/v1/auth/resetpassword
+
+#body ={
+    "resetPasswordLink":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmNkNzNhNGJkMWJhMjdiNTM4OTgzNTEiLCJpYXQiOjE2NTc2MzE5NzEsImV4cCI6MTY1NzYzMzQ3MX0.h6-QVFUM0Rfx3-rXyNXgcQxDvC_lEdOT4hYZ6VCDAWQ",
+    "newPassword":"123456789"
+}
